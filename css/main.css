@@ -1,5 +1,6 @@
 html { 
   background-image: url(bg.png) no-repeat center center fixed; 
+  background-size: cover
 }
 body {
     margin: 60px auto;
