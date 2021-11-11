@@ -1,6 +1,6 @@
 html {
   font-family:'Helvetica', 'Arial';
-  background: url(css/png.png) no-repeat center center fixed; 
+  background: url(png.png) no-repeat center center fixed; 
   background-size: cover;
   position: absolute;
   top: 0px;
