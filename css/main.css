@@ -1,5 +1,5 @@
 html { 
-  background: url(bg.png) no-repeat center center fixed; 
+  background-image: url(bg.png) no-repeat center center fixed; 
 }
 bg.png {
   /* Set rules to fill background */
