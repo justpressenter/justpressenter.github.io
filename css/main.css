@@ -19,6 +19,7 @@ nav ul, footer ul {
     color: white;
 }
 nav ul li, footer ul li {
+    font-family:'Helvetica', 'Arial';
     display: inline;
     margin-right: 20px;
     color: white;
@@ -37,21 +38,25 @@ h1 {
     color: white;
 }
 p {
+    font-family:'Helvetica', 'Arial';
     font-size: 1.5em;
     line-height: 1.4em;
     color: white;
 }
 footer {
+    font-family:'Helvetica', 'Arial';
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
     color: white;
 }
 ul.posts { 
+    font-family:'Helvetica', 'Arial';
     margin: 20px auto 40px; 
     font-size: 1.5em;
     color: white;
 }
 ul.posts li {
+    font-family:'Helvetica', 'Arial';
     list-style: none;
     color: white;
 }
