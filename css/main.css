@@ -16,42 +16,42 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    color: #999;
+    color: white;
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
-    color: #999;
+    color: white;
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: white;
 }
 a:hover {
     text-decoration: underline;
-    color: #999;
+    color: white;
 }
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: #999;
+    color: white;
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #999;
+    color: white;
 }
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    color: #999;
+    color: white;
 }
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
-    color: #999;
+    color: white;
 }
 ul.posts li {
     list-style: none;
-    color: #999;
+    color: white;
 }
