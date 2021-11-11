@@ -32,6 +32,7 @@ a {
     color: white;
 }
 a:hover {
+    font-family:'Helvetica', 'Arial';
     text-decoration: underline;
     color: white;
 }
