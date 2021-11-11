@@ -4,7 +4,6 @@ body {
     background-image: linear-gradient(red, yellow);
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box }
     background-color: #cccccc
 }
 nav ul, footer ul {
