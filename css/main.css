@@ -1,7 +1,7 @@
 html { 
   background: url(bg.png) no-repeat center center fixed; 
 }
-img.bg {
+bg.png {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
