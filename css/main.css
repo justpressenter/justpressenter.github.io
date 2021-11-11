@@ -1,10 +1,9 @@
 body {
     margin: 60px auto;
     width: 70%;
-    background-image: linear-gradient(red, yellow);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #cccccc
+    background-image: linear-gradient(red, yellow);
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
