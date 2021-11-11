@@ -1,10 +1,9 @@
-body {
-    margin: 60px auto;
-    width: cover;
-    height: cover;
-    background-image: linear-gradient(red, yellow);
-    background-repeat: no-repeat;
-    background-size: cover;
+html { 
+  background: url(bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
