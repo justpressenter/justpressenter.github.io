@@ -1,4 +1,5 @@
 html {
+  font-family:'Helvetica', 'Arial';
   background: url(bg.png) no-repeat center center fixed; 
   background-size: cover;
   position: absolute;
@@ -8,6 +9,7 @@ html {
   height: 100%;
 }
 body {
+    font-family:'Helvetica', 'Arial';
     margin: 60px auto;
     width: 70%;
 }
@@ -25,6 +27,7 @@ nav ul li, footer ul li {
     color: white;
 }
 a {
+    font-family:'Helvetica', 'Arial';
     text-decoration: none;
     color: white;
 }
