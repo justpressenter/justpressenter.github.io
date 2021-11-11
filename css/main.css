@@ -2,6 +2,7 @@ body {
     margin: 60px auto;
     width: 70%;
     background-image: linear-gradient(red, yellow);
+    background-color: #cccccc
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
