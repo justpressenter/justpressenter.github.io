@@ -24,6 +24,13 @@
                         <i class="material-icons is-liked bouncy">favorite</i>
                         <span class="like-overlay"></span>
                         </a>
+			$(document).ready(function(){
+
+    $('.like-button').click(function(){
+        $(this).toggleClass('is-active');
+    })
+
+})
 	        </div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
