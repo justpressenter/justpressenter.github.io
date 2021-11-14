@@ -1,1 +1,103 @@
-
+html {
+  font-family:'Helvetica', 'Arial';
+  background: url(bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: flip-2-ver-left-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+	        animation: flip-2-ver-left-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+  
+  @-webkit-keyframes flip-2-ver-left-bck {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+            transform: translateX(0) translateZ(0) rotateY(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: translateX(-100%) translateZ(-260px) rotateY(-180deg);
+            transform: translateX(-100%) translateZ(-260px) rotateY(-180deg);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+@keyframes flip-2-ver-left-bck {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+            transform: translateX(0) translateZ(0) rotateY(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+  100% {
+    -webkit-transform: translateX(-100%) translateZ(-260px) rotateY(-180deg);
+            transform: translateX(-100%) translateZ(-260px) rotateY(-180deg);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+}
+body {
+    font-family:'Helvetica', 'Arial';
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    color: white;
+}
+nav ul li, footer ul li {
+    font-family:'Helvetica', 'Arial';
+    display: inline;
+    margin-right: 20px;
+    color: white;
+}
+a {
+    font-family:'Helvetica', 'Arial';
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    font-family:'Helvetica', 'Arial';
+    text-decoration: underline;
+    color: white;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial';
+    color: white;
+}
+p {
+    font-family:'Helvetica';
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: white;
+}
+footer {
+    font-family:'Helvetica', 'Arial';
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+    color: white;
+}
+ul.posts { 
+    font-family:'Helvetica', 'Arial';
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+    color: white;
+}
+ul.posts li {
+    font-family:'Helvetica', 'Arial';
+    list-style: none;
+    color: white;
+}
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
