@@ -1,1 +1,16 @@
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
 
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-botton: 80%;
+    width: 100%;
+  }
+}
