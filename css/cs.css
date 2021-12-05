@@ -41,6 +41,11 @@ h1 {
     font-family:'Helvetica', 'Arial';
     color: white;
 }
+h2 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial';
+    color: white;
+}
 p {
     font-family:'Helvetica';
     font-size: 1.5em;
