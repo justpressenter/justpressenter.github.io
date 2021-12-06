@@ -26,6 +26,12 @@ nav ul li, footer ul li {
     margin-right: 20px;
     color: white;
 }
+selected {
+    font-family:'Helvetica', 'Arial';
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
 a {
     font-family:'Helvetica', 'Arial';
     text-decoration: none;
