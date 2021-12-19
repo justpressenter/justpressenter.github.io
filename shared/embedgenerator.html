@@ -8,7 +8,92 @@
 <body>
   <h1>Invisible text embed glitch for Discord.</h1>
   <br>
-    <input type="text" placeholder="Type a link. (https://)" id="myInput">
+      <div class="input-contain">
+        <input type="text" id="myInput" name="input" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+        <label class="placeholder-text" for="myInput" id="placeholder-myInput">
+            <div class="text">Type a url. (https://)</div>
+        </label>
+    </div>
+<style>
+  html{
+    font-family: "helvetica";
+  }
+.input-contain{
+    position: relative;
+}
+input{
+    height: 5rem;
+    width: 40rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+input:focus{
+    outline: none;
+    border-color: #ff4500;
+}
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+    background-color: white;
+    font-size: 1.1rem;
+    color: black;
+    transform: translate(0, -170%);
+}
+input:focus + .placeholder-text .text{
+    border-color: #ff4500;
+    color: #ff4500;
+}
+.placeholder-text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+.text{
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    transform: translate(0);
+    color: black;
+    transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+}
+input, .placeholder-text{
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+}
+
+@media (max-width: 40rem) {
+    input{
+        width: 70vw;
+    }
+}
+  </style>
+  <script>
+    let input_element = document.querySelector("input");
+
+input_element.addEventListener("keyup", () => {
+    input_element.setAttribute("value", input_element.value);
+})
+  </script>
+  <h2>Output:</h2>
+<p id="demo"></p>
+  <h3>After generating, copy the code and paste it in Discord to make an embed without a link.</h3>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value
+            let glitch = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _";
+            let result = glitch.concat(inputVal, " ");
+            
+            // Displaying the value
+          document.getElementById("demo").innerHTML = result;
+        }
+    </script>
     <a><button class="button1" type="button" onclick="getInputValue();">Initiate glitch</button></a>
   <!-- HTML !-->
 <button class="button-49" onclick="getInputValue();" role="button">Initiate glitch</button>
@@ -103,8 +188,7 @@
     clip-path: var(--slice-1);
     transform: translate(0);
   }
-}
-  </style>
+} 
 @media (min-width: 768px) {
   .button-49,
   .button-49:after {
@@ -112,21 +196,7 @@
     height: 86px;
     line-height: 88px;
   }
-}
-  <h2>Output:</h2>
-<p id="demo"></p>
-  <h3>After generating, copy the code and paste it in Discord to make an embed without a link.</h3>
-    
-    <script>
-        function getInputValue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("myInput").value
-            let glitch = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _";
-            let result = glitch.concat(inputVal, " ");
-            
-            // Displaying the value
-          document.getElementById("demo").innerHTML = result;
-        }
-    </script>
+} 
+  </style>
 </body>
 </html>
