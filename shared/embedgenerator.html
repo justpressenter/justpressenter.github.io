@@ -8,7 +8,7 @@
 <body>
   <h1>Invisible text embed glitch for Discord.</h1>
   <br>
-      <div class="input-contain">
+<div class="input-contain">
         <input type="text" id="myInput" name="input" autocomplete="off" value="" aria-labelledby="placeholder-fname">
         <label class="placeholder-text" for="myInput" id="placeholder-myInput">
             <div class="text">Type a url. (https://)</div>
@@ -32,10 +32,11 @@ input:focus{
     border-color: #ff4500;
 }
 input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
-    background-color: white;
+    background-color: 
+#60809F00;
     font-size: 1.1rem;
     color: black;
-    transform: translate(0, -170%);
+    transform: translate(0, -110%);
 }
 input:focus + .placeholder-text .text{
     border-color: #ff4500;
@@ -72,6 +73,13 @@ input, .placeholder-text{
     }
 }
   </style>
+  <script>
+    let input_element = document.querySelector("input");
+
+input_element.addEventListener("keyup", () => {
+    input_element.setAttribute("value", input_element.value);
+})
+  </script>
   <script>
     let input_element = document.querySelector("input");
 
