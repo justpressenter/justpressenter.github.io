@@ -12,6 +12,8 @@ body {
     font-family:'Helvetica', 'Arial';
     margin: 60px auto;
     width: 70%;
+    backdrop-filter: blur(34px) brightness(0.85);
+    padding: 4em
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial';
