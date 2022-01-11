@@ -12,6 +12,7 @@ body {
     font-family:'Helvetica', 'Arial';
     margin: 60px auto;
     width: 70%;
+  /*blur code (below) suggested and provided by jeffalo*/
     backdrop-filter: blur(34px) brightness(0.85);
     padding: 4em
 }
