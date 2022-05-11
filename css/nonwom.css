@@ -1,0 +1,107 @@
+html {
+  font-family:'Helvetica', 'Arial';
+  background: url(bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+body {
+    font-family:'Helvetica', 'Arial';
+  /*blur code (below) suggested and provided by jeffalo*/
+    backdrop-filter: blur(34px) brightness(0.85);
+    padding: 4em
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    color: white;
+}
+nav ul li, footer ul li {
+    font-family:'Helvetica', 'Arial';
+    display: inline;
+    margin-right: 20px;
+    color: white;
+}
+selected {
+    font-family:'Helvetica', 'Arial';
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+a {
+    font-family:'Helvetica', 'Arial';
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    font-family:'Helvetica', 'Arial';
+    text-decoration: underline;
+    color: white;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial';
+    color: white;
+}
+h2 {
+    font-size: 2.5em;
+    font-family:'Helvetica', 'Arial';
+    color: white;
+}
+h3 {
+    font-size: 2em;
+    font-family:'Helvetica', 'Arial';
+    color: white;
+}
+p {
+    font-family:'Helvetica';
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: white;
+}
+footer {
+    font-family:'Helvetica', 'Arial';
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+    color: white;
+}
+ul.posts { 
+    font-family:'Helvetica', 'Arial';
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+    color: white;
+}
+ul.posts li {
+    font-family:'Helvetica', 'Arial';
+    list-style: none;
+    color: white;
+}
+a.button1{
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
+}
+a.button1:hover{
+ color:#000000;
+ background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+ }
+}
