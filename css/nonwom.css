@@ -12,7 +12,8 @@ body {
     font-family:'Helvetica', 'Arial';
   /*blur code (below) suggested and provided by jeffalo*/
     backdrop-filter: blur(34px) brightness(0.85);
-    margin: 20px;
+    margin: 0px;
+    padding: 10px
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial';
