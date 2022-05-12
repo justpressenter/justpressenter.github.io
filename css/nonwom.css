@@ -1,6 +1,6 @@
 html {
   font-family:'Helvetica', 'Arial';
-  background: url(https://www.teahub.io/photos/full/34-348059_dark-grey-plain-background.jpg) no-repeat center center fixed; 
+  background: url(/assets/images/image.png) no-repeat center center fixed; 
   background-size: cover;
   position: absolute;
   top: 0px;
