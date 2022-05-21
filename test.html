@@ -1,6 +1,98 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<html><head>
+	<style>
+		body {
+  height: 100vh;
+  background: #010101;
+  cursor: none;
+  margin: 0;
+  display: flex;
+  font-family: monospace;
+  
+  h1, p , a {
+    color: #fff;
+  }
+  
+  a {
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+    margin-top: 25px;
+  }
+  
+  .cursor {
+    pointer-events: none;
+    
+    &__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      z-index: 1000;
+      
+      circle {
+        fill: #f7f8fa;
+      }
+    }      
+  } 
+  
+  .left, .right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right {
+    background: #fff;
+    
+    a {
+      border-bottom: 2px solid #000;
+    }
+    
+    h1, p, a {
+      color: #000;
+    }
+  }
+}
+	</style>
+	<script>
+		const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.hoverable');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+  TweenMax.to($bigBall, .4, {
+    x: e.pageX - 15,
+    y: e.pageY - 15
+  })
+  TweenMax.to($smallBall, .1, {
+    x: e.pageX - 5,
+    y: e.pageY - 7
+  })
+}
+
+// Hover an element
+function onMouseHover() {
+  TweenMax.to($bigBall, .3, {
+    scale: 4
+  })
+}
+function onMouseHoverOut() {
+  TweenMax.to($bigBall, .3, {
+    scale: 1
+  })
+}
+	</script>
+	
 	</head>
 	<body>
 	<div class="cursor">
@@ -16,65 +108,16 @@
     </svg>
   </div>
 </div>
-<style>
-	body .cursor {
-  pointer-events: none;
-}
-body .cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  mix-blend-mode: difference;
-  z-index: 1000;
-}
-body .cursor__ball circle {
-  fill: #f7f8fa;
-}
-body .left,
-body .right {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-		</style>
-		<script>
-			const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable');
 
-// Listeners
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {if (window.CP.shouldStopExecution(0)) break;
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
+<div class="left">
+  <h1>Hello</h1>
+  <p>Check out this link:</p>
+  <a class="hoverable">Hover meh</a>  
+</div>
 
-// Move the cursor
-window.CP.exitedLoop(0);function onMouseMove(e) {
-  TweenMax.to($bigBall, .4, {
-    x: e.pageX - 15,
-    y: e.pageY - 15 });
-
-  TweenMax.to($smallBall, .1, {
-    x: e.pageX - 5,
-    y: e.pageY - 7 });
-
-}
-
-// Hover an element
-function onMouseHover() {
-  TweenMax.to($bigBall, .3, {
-    scale: 4 });
-
-}
-function onMouseHoverOut() {
-  TweenMax.to($bigBall, .3, {
-    scale: 1 });
-
-}
-		</script>
-	</body>
-</html>
+<div class="right">
+  <h1>Hello</h1>
+  <p>Check out this link:</p>
+  <a class="hoverable">Hover meh</a>  
+</div>
+<body>
