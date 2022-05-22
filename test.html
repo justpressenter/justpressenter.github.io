@@ -1,118 +1,73 @@
 <html><head>
 	<style>
-		body {
-	 height: 100vh;
-	 background: #010101;
-	 cursor: none;
-	 margin: 0;
-	 display: flex;
-	 font-family: monospace;
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+* {
+  margin: 0;
+  padding: 0;
 }
- body h1, body p, body a {
-	 color: #fff;
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
+  transition: all 0.2s linear;
+  cursor: none;
 }
- body a {
-	 border-bottom: 2px solid #fff;
-	 padding: 10px 0;
-	 margin-top: 25px;
+body .imgBack {
+  position: absolute;
+  width: 700px;
 }
- body .cursor {
-	 pointer-events: none;
+body .cursor {
+  background: #1F2937;
+  transform: scale(0.5);
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1F2937;
+  border-radius: 100%;
+  position: absolute;
+  box-shadow: 2px -3px 41px -1px rgba(250, 250, 250, 0.64);
+  transition: all 0.1s linear;
+  pointer-events: none;
+  -webkit-text-fill-color: white;
+  text-fill-color: white;
 }
- body .cursor__ball {
-	 position: fixed;
-	 top: 0;
-	 left: 0;
-	 mix-blend-mode: difference;
-	 z-index: 1000;
+
+body .a:hover ~ .cursor {
+  transform: scale(1);
+  border: 3px solid #ff2e2e;
+  mix-blend-mode: exclusion;
+  background: #ff2e2e;
 }
- body .cursor__ball circle {
-	 fill: #f7f8fa;
-}
- body .left, body .right {
-	 height: 100%;
-	 width: 100%;
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-	 align-items: center;
-}
- body .right {
-	 background: #fff;
-}
- body .right a {
-	 border-bottom: 2px solid #000;
-}
- body .right h1, body .right p, body .right a {
-	 color: #000;
-}
- 
+
 	</style>
 	<script>
-"use strict";
+let title = document.querySelector('.a');
+let curs = document.querySelector('.cursor');
 
-const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable'); // Listeners
+document.addEventListener('mousemove', (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+  curs.style.left = (x - 22) + "px";
+  curs.style.top = (y - 22) + "px";
+});
 
-document.body.addEventListener('mousemove', onMouseMove);
-
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-} // Move the cursor
-
-
-function onMouseMove(e) {
-  TweenMax.to($bigBall, .4, {
-    x: e.pageX - 15,
-    y: e.pageY - 15
-  });
-  TweenMax.to($smallBall, .1, {
-    x: e.pageX - 5,
-    y: e.pageY - 7
-  });
-} // Hover an element
+document.addEventListener('mouseleave', (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+  curs.style.left = (x - 22) + "px";
+  curs.style.top = (y - 22) + "px";
+});
 
 
-function onMouseHover() {
-  TweenMax.to($bigBall, .3, {
-    scale: 4
-  });
-}
-
-function onMouseHoverOut() {
-  TweenMax.to($bigBall, .3, {
-    scale: 1
-  });
-}
 	</script>
 	
 	</head>
 	<body>
-	<div class="cursor">
-  <div class="cursor__ball cursor__ball--big ">
-    <svg height="30" width="30">
-      <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-    </svg>
-  </div>
-  
-  <div class="cursor__ball cursor__ball--small">
-    <svg height="10" width="10">
-      <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-    </svg>
-  </div>
-</div>
+<img class="imgBack" src="https://justpressenter.github.io/css/bg.jpg">
+<a href="example.com" class="a">hover on this</a>
+<div class="cursor"></div>
 
-<div class="left">
-  <h1>Hello</h1>
-  <p>Check out this link:</p>
-  <a class="hoverable">Hover meh</a>  
-</div>
-
-<div class="right">
-  <h1>Hello</h1>
-  <p>Check out this link:</p>
-  <a class="hoverable">Hover meh</a>  
-</div>
 <body>
