@@ -1,8 +1,12 @@
 <html>
   <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <style>
       html, body {
     height: 100%;
+background:#2E2E2E;
 }
 
 html {
@@ -13,10 +17,65 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+flex-direction:column;
+display:flex;
+margin:0;
+text-align:center;
+}
+img{
+height:200px;
+width:200px;
+margin-left:50px;
+margin-bottom:20px;
+}
+button{
+background:#353434;
+display:flex;
+border:none;
+color:white;
+justify-content:center;
+width:300px;
+height:40px;
+line-height:40px;
+vertical-align:center;
+border-radius:20px;
+transition:.2s;
+cursor:pointer;
+font-family: 'Montserrat', sans-serif;
+}
+input{
+background:#353434;
+display:flex;
+border:none;
+color:white;
+justify-content:center;
+width:300px;
+height:40px;
+line-height:40px;
+vertical-align:center;
+border-radius:20px;
+transition:.2s;
+cursor:pointer;
+font-family: 'Montserrat', sans-serif;
+}
+button:hover{
+background:#474747;
+}
+.stuff{
+display:flex;
+width:300px;
+height:300px;
+flex-direction:column;
+justify-content:center;
+position:absolute;
+top: calc(50% - 150px);
+left: calc(50% - 150px);
+margin:0;
 }
     </style>
   </head>
 <body>
+<div class="stuff">
   <img src="https://source.boringavatars.com/beam/200/0?colors=FFA656,F6EEE0,92FFB4,F04842,3F7483">
   <button onclick="
                    
@@ -29,5 +88,8 @@ for (var i = 0, l = images.length; i < l; i++) {
   images[i].src = boringavatar;
 }">Generate new avatar
   </button>
+  <input placeholder="This input does nohing yet. It is a test.">
+  </input>
+</div>
 </body>
 </html>
